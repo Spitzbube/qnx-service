@@ -12,7 +12,7 @@
 #include <sys/usb100.h>
 #include <sys/usbdi.h>
 
-
+#include <pci/pci.h>
 
 
 
