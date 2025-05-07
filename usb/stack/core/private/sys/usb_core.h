@@ -32,22 +32,30 @@
     obj_sync_t sync; //0
     uint32_t flags; //36 = 0x24
     int pci_hdl; //40 = 0x28
-    usb_core_attr_t attr; //44 = 0x2c +0x30 = 0x5c
-    /*<bf617>*/struct usb_memchunk_ctrl* memchunk; //92 = 0x5c
+    /*211*/ usb_core_attr_t attr; //44 = 0x2c +0x30 = 0x5c
+    /*213*//*<bf617>*/struct usb_memchunk_ctrl* memchunk; //92 = 0x5c
     /*<bf617>*/struct usb_memchunk_ctrl* memchunk_cached; //96 = 0x60
-    pthread_rwlock_t usb_rwlock; //100 = 0x64
+    /*216*/ pthread_rwlock_t usb_rwlock; //100 = 0x64
     pthread_mutex_t usb_mutex; //148 = 0x94
     pthread_mutex_t usb_mmutex; //156 = 0x9c
     pthread_mutex_t mutex; //164 = 0xa4
-    obj_pool_t* obj_cleanup_pool; //172 = 0xac
+    /*221*/obj_pool_t* obj_cleanup_pool; //172 = 0xac
     obj_pool_t* cpool; //176 = 0xb0
     obj_pool_t* bpool; //180 = 0xb4
     obj_pool_t* dpool; //184 = 0xb8
     obj_pool_t* surb_pool; //188 = 0xbc
-    /*<bea42>*/struct _timeout_ctrl* timeout_ctrl; //192 = 0xc0
-    struct sigevent timer_usb; //196 = 0xc4
-    struct sigevent timer_enum; //212 = 0xd4
-    //TODO!!!
+    /*227*//*<bea42>*/struct _timeout_ctrl* timeout_ctrl; //192 = 0xc0
+    /*229*/struct sigevent timer_usb; //196 = 0xc4
+    /*230*/struct sigevent timer_enum; //212 = 0xd4
+    /*232*//*<bb49d>*/uint32_t mem_flags; //228
+    /*233*//*<bb518>*/char* HcDMAMemoryResource; //232
+    /*235*//*<bea4e>*/surb_ctx_t* surb_ctx; //236
+    /*236*//*<bb15f>*/void* controller_driver_ctrl; //240
+    /*237*//*<bb15f>*/void* driver_hdl; //244
+    /*238*//*<bf61d>*/struct _usb_client_ctrl* client_ctrl; //248
+    /*240*//*<bf623>*/usb_transfer_ctx_ctrl_t* tctx_ctrl; //252
+    /*241*//*<bf62e>*/struct _usb_enum_ctrl* enum_ctrl; //256
+    /*242*//*<bf689>*/struct _usb_hwi_ctrl* hwi_ctrl; //260
     //264
 };
 

@@ -421,9 +421,9 @@ typedef /*361*//*<bdbae>*/struct _iousb_hw_ctrl {
 
 
 
-
-
-
+/* chip state */
+#define USB_BUS_STATE_START				5
+#define USB_BUS_STATE_STOP				6
 
 
 
