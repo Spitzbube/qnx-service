@@ -161,14 +161,14 @@ typedef /*153*//*<bd643>*/struct _iousb_pipe_methods {
 
 
 
-
-
-
-
-
-
-
-
+/* USB transfer flags */
+#define  PIPE_FLAGS_TOKEN_SETUP         0x01
+#define  PIPE_FLAGS_TOKEN_STATUS        0x02
+#define  PIPE_FLAGS_TOKEN_IN            0x04
+#define  PIPE_FLAGS_TOKEN_OUT           0x08
+#define  PIPE_FLAGS_BUFFER_PHYS         0x10
+#define  PIPE_FLAGS_MULTI_XFER          0x20
+#define  PIPE_FLAGS_LAST_PACKET         0x80000000
 
 typedef /*173*//*<bd73f>*/struct _iousb_ep_pipe_methods {
     iousb_pipe_methods_t* ctrl_pipe_methods; //0
@@ -524,6 +524,11 @@ typedef /*361*//*<bdbae>*/struct _iousb_hw_ctrl {
     /*524*//*<bb15f>*/void* dc_data; //68
     /*525*//*<bb15f>*/void* dll_hdl; //72
 }; //size: 80
+
+/* device speed */
+#define	IOUSB_DEVICE_FULL_SPEED		0
+#define	IOUSB_DEVICE_LOW_SPEED		1
+#define	IOUSB_DEVICE_HIGH_SPEED		2
 
 
 #endif
