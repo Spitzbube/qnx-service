@@ -348,14 +348,14 @@
 
 
 /*350*//*<bb562><4a1>*/struct pci_dev_info {
-    uint16_t DeviceId; //0
-    uint16_t VendorId; //2
-    uint16_t SubsystemId; //4
-    uint16_t SubsystemVendorId; //6
+    /*351*//*<bb487>*/uint16_t DeviceId; //0
+    /*352*//*<bb487>*/uint16_t VendorId; //2
+    /*353*//*<bb487>*/uint16_t SubsystemId; //4
+    /*354*//*<bb487>*/uint16_t SubsystemVendorId; //6
     /*<3bd>*/uint8_t BusNumber; //8
     uint8_t DevFunc; //9
     uint8_t Revision; //10
-    uint8_t Rsvd; //11
+    uint8_t Rsvd[5/*size???*/]; //11
     /*<3d3>*/uint32_t Class; //16
     /*<3d3>*/uint32_t Irq; //20
 
